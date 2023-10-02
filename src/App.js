@@ -4,10 +4,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import CarList from "./CarList";
 import CarDetails from "./CarDetails";
 
-
 const router = createBrowserRouter([
 	{
-		path: "/cars/page/",
+		path: "/cars",
 		element: <CarList />,
 	},
 	{
