@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import cars from "./data";
+import cars from "../data";
 import { Link } from "react-router-dom";
 import { BsSearch } from "react-icons/bs";
 import { BiChevronDown } from "react-icons/bi";
-import Card from "./Components/Card/Card";
+import Card from "../Components/Card/Card";
 import "./CarList.css";
-import Image from "./Components/Image/Image";
-import CarModel from "./Components/AboutCars/Model/CarModel";
-import CarDescription from "./Components/AboutCars/Description/CarDescription";
-import Rent from "./Components/AboutCars/Rent/Rent";
+import Image from "../Components/Image/Image";
+import CarModel from "../Components/AboutCars/Model/CarModel";
+import CarDescription from "../Components/AboutCars/Description/CarDescription";
+import Rent from "../Components/AboutCars/Rent/Rent";
 
 const ITEMS_PER_PAGE = 6;
 
@@ -85,7 +85,7 @@ function CarList() {
 					<Link to={`/car/${item.id}`}>
 						<Card>
 							<li key={item.id}>
-								<Image item={item} height={"h-[300px]"}/>
+								<Image item={item} height={"h-[300px]"} />
 								<CarModel item={item} />
 								<CarDescription item={item} />
 								<hr className="border-black opacity-20 my-4" />

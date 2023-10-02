@@ -1,5 +1,5 @@
 import React from 'react'
-import "./../../CarList.css";
+import "./../../Pages/CarList.css";
 
 const Image = ({item, height}) => {
   return (
