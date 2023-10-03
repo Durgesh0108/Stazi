@@ -3,18 +3,28 @@ import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import CarList from "./Pages/CarList";
 import CarDetails from "./Pages/CarDetails";
+import Home from "./Pages/Home";
 
 const router = createBrowserRouter([
 	{
-		path: "/cars",
+		path: "/",
 		children: [
 			{
 				index: true,
-				element: <CarList />,
+				element: <Home />,
 			},
 			{
-				path: ":id",
-				element: <CarDetails />,
+				path: "cars",
+				children: [
+					{
+						index: true,
+						element: <CarList />,
+					},
+					{
+						path: ":id",
+						element: <CarDetails />,
+					},
+				],
 			},
 		],
 	},
