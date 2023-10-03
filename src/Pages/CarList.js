@@ -82,7 +82,7 @@ function CarList() {
 			</Card>
 			<ul className="grid grid-cols-3 gap-4">
 				{currentCars.map((item) => (
-					<Link to={`/car/${item.id}`}>
+					<Link to={`/cars/${item.id}`}>
 						<Card>
 							<li key={item.id}>
 								<Image item={item} height={"h-[300px]"} />
